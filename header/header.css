@@ -1,0 +1,245 @@
+.header { 
+  position: relative;
+  background-image: url(./img/stag-office-mockup.png);
+  background-position-y: center;
+  background-size: cover;
+  z-index: 1;
+}
+.header::before { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background: rgba(47, 50, 75, 0.85);
+  z-index: -1;
+}
+
+.header__head-block {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 40px;
+  width: 75%;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.head-block__call-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__head-block::before { 
+  content: url(./img/Logo.svg);
+  width: 68px;
+  height: 68px;
+}
+
+.call-me__tel-link { 
+  color: var(--color-white);
+  font-size: 23.85px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 2.85px;
+}
+
+.call-me__call-me-link {
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.call-me__call-me-link::after {
+  display: block;
+  content: " ";
+  width: 131.98px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.header__section { 
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.header-section__title { 
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 990px;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 61px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header-section__paragraph { 
+  max-width: 960px;
+  min-height: 89px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.header-section__button { 
+  border: none;
+  width: 200px;
+  height: 48px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 25px 0px rgba(21, 169, 203, 0.3);
+  background: rgb(21, 169, 203);
+  color: var(--color-white);
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 1024px) {
+
+  .header__head-block {
+    padding-top: 26px;
+    max-width: 964px;
+    margin-bottom: 70px;
+  }
+  .head-block__call-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header__head-block::before {
+    content: url(./img/Logo-1024.svg);
+    width: 60px;
+    height: 60px;
+  }
+  
+  .call-me__tel-link { 
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 4px;
+  }
+  
+  .call-me__call-me-link {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .call-me__call-me-link::after {
+    width: 106px;
+    border-radius: 50px;
+  }
+  
+  .header-section__title { 
+    max-width: 780px;
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 27.57px;
+  }
+  
+  .header-section__paragraph { 
+    max-width: 754px;
+    min-height: 70px;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 60.43px;
+  }
+  
+  .header-section__button { 
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header { 
+    position: relative;
+    background-image: url(./img/stag-office-mockup.png);
+    background-position-y: center;
+    background-size: cover;
+    z-index: 1;
+  }
+  .header::before { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    background: rgba(47, 50, 75, 0.85);
+    z-index: -1;
+  }
+  
+  .header__head-block {
+    padding-top: 15px;
+    width: 290px;
+    margin-bottom: 65px;
+  }
+  
+  .head-block__call-me {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .header__head-block::before { 
+    content: url(./img/Logo-320.svg);
+    width: 30px;
+    height: 30px;
+  }
+  
+  .call-me__tel-link { 
+    display: none;
+  }
+  
+  .call-me__call-me-link {
+    visibility: hidden;
+  }
+  
+  .call-me__call-me-link::before {
+    display: flex;
+    visibility: visible;
+    content: url(./img/Phone.svg);
+    align-self: center;
+    justify-self: flex-end;
+  }
+  
+  .header__section { 
+    padding: 0 15px;
+  }
+  
+  .header-section__title { 
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 23px;
+  }
+  
+  .header-section__paragraph {
+    display: none;
+    visibility: hidden;
+    width: auto;
+    min-height: 77px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 54px;
+  }
+  
+  .header-section__paragraph_320px {
+    visibility: visible;
+    display: block;
+  }
+
+  .header-section__button { 
+    width: 160px;
+    height: 38px;
+    margin-bottom: 65px;
+  }
+}
