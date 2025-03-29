@@ -111,6 +111,7 @@ align-items: center;
     max-width: 964px;
     margin-bottom: 70px;
   }
+
   .head-block__call-me {
     display: flex;
     flex-direction: column;
@@ -160,6 +161,7 @@ align-items: center;
 }
 
 @media (max-width: 320px) {
+  
   .header { 
     position: relative;
     background-image: url(./img/stag-office-mockup.png);
@@ -167,6 +169,7 @@ align-items: center;
     background-size: cover;
     z-index: 1;
   }
+
   .header::before { 
     position: absolute;
     top: 0;

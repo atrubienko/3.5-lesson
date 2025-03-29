@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
   <body class="body">
-    <container class="container">
+    <div class="container">
       <header class="header">
         <div class="header__head-block head-block">
           <div class="head-block__call-me call-me">
@@ -31,24 +31,26 @@
           <h2 class="section-about__title">Уникальный заголовок для преимущества компании</h2>
           <h3 class="section-about__title-h3"> О нас </h3>
           <p class="section-about__paragraph"> Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить. </p>
-          <ul class="section-about__list section-about-list">
-            <li class="section-about-list__item item">
-              <p class="item__paragraph"> Первое целевое преимущество </p>
-            </li>
-            <li class="section-about-list__item item">
-              <p class="item__paragraph"> Второе целевое преимущество </p>
-            </li>
-            <li class="section-about-list__item item">
-              <p class="item__paragraph"> Третье целевое преимущество </p>
-            </li>
-            <li class="section-about-list__item item">
-              <p class="item__paragraph"> Четвертое целевое преимущество </p>
-            </li>
-          </ul>
+          <div class="section-about__list-wrapper list-wrapper">
+            <ul class="section-about__list section-about-list">
+              <li class="section-about-list__item item" id="one">
+                <p class="item__paragraph"> Первое целевое преимущество </p>
+              </li>
+              <li class="section-about-list__item item" id="two">
+                <p class="item__paragraph"> Второе целевое преимущество </p>
+              </li>
+              <li class="section-about-list__item item" id="three">
+                <p class="item__paragraph"> Третье целевое преимущество </p>
+              </li>
+              <li class="section-about-list__item item" id="four">
+                <p class="item__paragraph"> Четвертое целевое преимущество </p>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="main__section-contact-screen section-contact-screen">
           <h2 class="section-contact-screen__title"> Остались вопросы? </h2>
-          <form class="section-contact-screen__form form" action="" method="post">
+          <form class="section-contact-screen__form form" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <fieldset class="form__fieldset fieldset">
               <legend class="fieldset__legend"> Оставьте номер телефона, и мы перезвоним вам </legend>
               <div class="fieldset__input-block input-block">
@@ -73,8 +75,8 @@
             <a href="" class="f-call-me__call-me-link">Перезвоните мне</a>
           </div>
         </div>
-        <p class="footer-content__paragraph_made-in-320px footer-content__paragraph" hidden> Сделано Ивановым Иваном </p>
+        <p class="footer__paragraph-in-320px" hidden> Сделано Ивановым Иваном </p>
       </footer>
-    </container>
+    </div>
   </body>
 </html>

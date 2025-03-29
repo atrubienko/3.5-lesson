@@ -288,7 +288,6 @@ padding-top: 70px;
     padding-top: 30px;
     }
     
-    
     .section-about__title {
       font-size: 20px;
       line-height: 23px;
@@ -320,19 +319,59 @@ padding-top: 70px;
       line-height: 14px;
       margin-bottom: 40px;
     }
-    
+
+    .section-about__list-wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      padding: 0 15px;
+      min-height: 182px;
+      margin-bottom: 60px;
+    }
+
     .section-about__list {
-      gap: 40px;
-      flex-wrap: wrap;
+      justify-self: center;
       counter-reset: list-item-count 0;
       margin-bottom: 60px;
+      flex-basis: 166px;
+    }
+
+    .section-about__list-wrapper::before {
+      display: flex;
+      content: url(./img/ArrowL.svg);
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--color-white);
+      border-radius: 100%;
+      box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-about__list-wrapper::after {
+      display: flex;
+      content: url(./img/ArrowR.svg);
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      width: 38px;
+      height: 38px;
+      background: rgba(75, 77, 98, 0.72);
+      border-radius: 100%;
+      box-shadow: 4px 4px 25px 0px rgba(0, 210, 248, 0.05);
     }
     
     .section-about-list__item {
-      flex-basis: 166px;
-      gap: 26px;
+      display: flex;
+      position: absolute;
+      max-width: 166px;
     }
     
+    .section-about-list__item:not(#one){
+      visibility: hidden;
+    }
+
     .section-about-list__item::before {
       width: 104px;
       height: 104px;
@@ -340,6 +379,7 @@ padding-top: 70px;
     }
     
     .item__paragraph {
+      display: flex;
       min-height: 52px;
       font-size: 18px;
       line-height: 21px;

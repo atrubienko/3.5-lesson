@@ -155,7 +155,8 @@
     align-self: center;
     justify-self: flex-end;
   }
-  .footer-content__paragraph_made-in-320px {
+  
+  .footer__paragraph-in-320px {
     display: flex;
     visibility: visible;
     font-size: 12px;
