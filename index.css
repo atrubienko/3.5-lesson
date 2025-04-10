@@ -1,7 +1,9 @@
 @import "./normalize.css";
 @import "./style.css";
 @import "./fonts.css";
+@import "./slider/swiper-bundle.min.css";
 @import "./var.css";
 @import "./header/header.css";
+@import "./slider/swiper.css";
 @import "./main/main.css";
 @import "./footer/footer.css";

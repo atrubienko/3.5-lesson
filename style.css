@@ -70,8 +70,11 @@ h2,
 h3,
 p,
 figure,
-fieldset {
+fieldset,
+button,
+input {
   margin: 0;
+  padding: 0;
 }
 
 iframe {

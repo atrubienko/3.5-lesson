@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lesson 3.5</title>
+  <title>lesson 3.6</title>
   <link rel="preload" href="./fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.css">
+  <script src="./slider/swiper-bundle.min.js"></script>
 </head>
   <body class="body">
     <div class="container">
@@ -31,21 +32,48 @@
           <h2 class="section-about__title">Уникальный заголовок для преимущества компании</h2>
           <h3 class="section-about__title-h3"> О нас </h3>
           <p class="section-about__paragraph"> Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить. </p>
+
           <div class="section-about__list-wrapper list-wrapper">
             <ul class="section-about__list section-about-list">
-              <li class="section-about-list__item item" id="one">
+              <li class="section-about-list__item item">
                 <p class="item__paragraph"> Первое целевое преимущество </p>
               </li>
-              <li class="section-about-list__item item" id="two">
+              <li class="section-about-list__item item">
                 <p class="item__paragraph"> Второе целевое преимущество </p>
               </li>
-              <li class="section-about-list__item item" id="three">
+              <li class="section-about-list__item item">
                 <p class="item__paragraph"> Третье целевое преимущество </p>
               </li>
-              <li class="section-about-list__item item" id="four">
+              <li class="section-about-list__item item">
                 <p class="item__paragraph"> Четвертое целевое преимущество </p>
               </li>
             </ul>
+            <div class="swiper" hidden>
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="swiper__item swiper-item">
+                    <p class="swiper-item__paragraph"> Первое целевое преимущество </p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper__item swiper-item">
+                    <p class="swiper-item__paragraph"> Второе целевое преимущество </p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper__item swiper-item">
+                    <p class="swiper-item__paragraph"> Третье целевое преимущество </p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper__item swiper-item">
+                    <p class="swiper-item__paragraph"> Четвертое целевое преимущество </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="section-about__button-prev button-prev" hidden><img class="button-prev__img" src="./slider/img/ArrowL.svg" alt=""></div>
+            <div class="section-about__button-next button-next" hidden><img class="button-next__img" src="./slider/img/ArrowR.svg" alt=""></div>
           </div>
         </section>
         <section class="main__section-contact-screen section-contact-screen">
@@ -58,18 +86,19 @@
                 <input class="input-block__input" type="tel" placeholder="Телефон">
                 <input class="input-block__input" type="email" placeholder="E-mail">
               </div>
-              <button class="fieldset__submit-button"> позвоните мне </button>
+              <button class="fieldset__submit-button"> Позвоните мне </button>
             </fieldset>
           </form>
           <p class="section-contact-screen__paragraph contact-paragraph">Я даю своё <a class="contact-paragraph__agree-link" href="">согласие</a> на обработку моих персональных данных.</p>
         </section>
       </main>
+
       <footer class="footer">
         <div class="footer__content footer-content">
           <div class="footer-content__logo">
             <p class="footer-content__paragraph_rules footer-content__paragraph">© 2022 XXXcompany. Все права защищены.</p>
           </div>
-          <p class="footer-content__paragraph_made-in footer-content__paragraph"> Сделано в Ивановым Иваном </p>
+          <p class="footer-content__paragraph_made-in footer-content__paragraph"> Сделано Ивановым Иваном </p>
           <div class="footer-content__call-me f-call-me">
             <a href="tel:89625561234" class="f-call-me__tel-link">+7 (962) 556 - 1234</a>
             <a href="" class="f-call-me__call-me-link">Перезвоните мне</a>
@@ -78,5 +107,17 @@
         <p class="footer__paragraph-in-320px" hidden> Сделано Ивановым Иваном </p>
       </footer>
     </div>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+          // Настройки Swiper
+          loop: false, // Бесконечная прокрутка
+          navigation: {
+              nextEl: '.section-about__button-next',
+              prevEl: '.section-about__button-prev',
+          },
+      });
+    </script>
+
   </body>
 </html>
