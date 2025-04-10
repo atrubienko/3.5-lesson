@@ -72,10 +72,19 @@
   box-shadow: 4px 4px 25px 0px rgba(0, 210, 248, 0.05);
 }
 
+@media (min-width: 321px) {
+  .swiper, 
+  .section-about__button-prev, 
+  .section-about__button-next {
+    visibility:hidden;
+    display: none;
+  }
+}
+
 @media (max-width: 320px) {
   .swiper, 
   .section-about__button-prev, 
-  .section-about__button-prev {
+  .section-about__button-next {
     visibility: visible;
   }
   
